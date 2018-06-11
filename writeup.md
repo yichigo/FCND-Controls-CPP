@@ -1,3 +1,7 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
+
 ## Project: Control of a 3D Quadrotor
 
 #### Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf.
@@ -6,7 +10,9 @@ The writeup / README should include a statement and supporting figures / images 
 
 
 #### 1.Generate Motor Commands
+From the moment in 3 directions and the thrust ( 4 quantities), solve the equation to get 4 motors' thrusts.
 
+F_1 - F_2 - F_3 + F_4 = \tau_x / l
 
 #### 2.Body Rate Control
 
