@@ -5,13 +5,19 @@
 The writeup / README should include a statement and supporting figures / images that explain how each rubric item was addressed, and specifically -where in the code each step was handled.
 
 
+#### 1.Generate Motor Commands
 
-### Pitch Control
-### Altitude Control
 
-### Lateral Position control
+#### 2.Body Rate Control
 
-### Yaw control
+#### 3.Roll Pitch Control
+
+#### 4.Altitude Control
+
+#### 5.Lateral Position Control
+
+#### 6.Yaw Control
+
 
 
 ### Evaluation, run in C++
