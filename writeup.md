@@ -9,6 +9,3 @@ The writeup / README should include a statement and supporting figures / images 
 <p align="center">
 <img src="gif/scenario_2.gif" width="500"/>
 </p>
-
-
-![x64](gif/scenario_2.gif)
