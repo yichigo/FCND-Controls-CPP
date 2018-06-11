@@ -16,26 +16,22 @@ The writeup / README should include a statement and supporting figures / images 
 
 ### Evaluation, run in C++
 
-## Scenario 1 Intro
-
+# Scenario 1 Intro
 <p align="center">
 <img src="gif/scenario_1.gif" width="500"/>
 </p>
 
-## Scenario 2 Attitude Control
-
+# Scenario 2 Attitude Control
 <p align="center">
 <img src="gif/scenario_2.gif" width="500"/>
 </p>
 
-## Scenario 3 Position Control
-
+# Scenario 3 Position Control
 <p align="center">
 <img src="gif/scenario_3.gif" width="500"/>
 </p>
 
-## Scenario 4 Non Idealities
-
+# Scenario 4 Non Idealities
 <p align="center">
 <img src="gif/scenario_4.gif" width="500"/>
 </p>
@@ -47,14 +43,12 @@ The writeup / README should include a statement and supporting figures / images 
 <img src="gif/scenario_5.gif" width="500"/>
 </p>
 
-## Scenario 6 Test Many Quads
-
+# Scenario 6 Test Many Quads
 <p align="center">
 <img src="gif/scenario_6.gif" width="500"/>
 </p>
 
-## Scenario 7 Test Mavlink
-
+# Scenario 7 Test Mavlink
 <p align="center">
 <img src="gif/scenario_7.gif" width="500"/>
 </p>
