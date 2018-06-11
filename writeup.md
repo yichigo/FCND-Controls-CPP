@@ -37,7 +37,7 @@ The writeup / README should include a statement and supporting figures / images 
 </p>
 
 
-## Scenario 5 Trajectory Follow
+# Scenario 5 Trajectory Follow
 
 <p align="center">
 <img src="gif/scenario_5.gif" width="500"/>
