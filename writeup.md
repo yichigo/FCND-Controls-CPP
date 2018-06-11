@@ -1,7 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
-
 ## Project: Control of a 3D Quadrotor
 
 #### Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf.
@@ -10,13 +6,35 @@ The writeup / README should include a statement and supporting figures / images 
 
 
 #### 1.Generate Motor Commands
-From the moment in 3 directions and the thrust ( 4 quantities), solve the equation to get 4 motors' thrusts.
+From the moment in 3 directions and the thrust ( 4 quantities), 
 
-F_1 - F_2 - F_3 + F_4 = \tau_x / l
+F1 - F2 - F3 + F4 = Mx / l
+
+F1 + F2 - F3 - F4 = My / l
+
+F1 - F2 + F3 - F4 = Mz / l
+
+F1 + F2 + F3 + F4 = thrust
+
+Solve the equation to get the thrusts of 4 mortors.
 
 #### 2.Body Rate Control
+momentCmd = I * kpPQR * ( pqrCmd - pqr );
 
 #### 3.Roll Pitch Control
+Calculate collective acceleration: c = - collThrustCmd / mass;
+
+using c to find the portion of acceleration: b_cmd = V3F(accelCmd.x/c, accelCmd.y/c, 0.f);
+
+then find the error: b_err = b_cmd - V3F(R(0,2), R(1,2), 0.f);
+
+and get: b_cmd_dot = kpBank * b_err;
+
+Combining b_cmd_dot and R matrix, we get:
+
+pqrCmd.x = (R(1,0) * b_cmd_dot.x - R(0,0) * b_cmd_dot.y) / R(2,2);
+pqrCmd.y = (R(1,1) * b_cmd_dot.x - R(0,1) * b_cmd_dot.y) / R(2,2);
+
 
 #### 4.Altitude Control
 
