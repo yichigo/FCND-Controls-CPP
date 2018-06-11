@@ -19,6 +19,10 @@ F1 + F2 + F3 + F4 = thrust
 Solve the equation to get the thrusts of 4 mortors.
 
 #### 2.Body Rate Control
+We find the error of body rate: ( pqrCmd - pqr )
+
+then calculate the momentCmd from moment of inertia and error of body rate:
+
 momentCmd = I * kpPQR * ( pqrCmd - pqr );
 
 #### 3.Roll Pitch Control
