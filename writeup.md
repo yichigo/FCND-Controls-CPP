@@ -44,19 +44,25 @@ pqrCmd.y = (R(1,1) * b_cmd_dot.x - R(0,1) * b_cmd_dot.y) / R(2,2);
 #### 4.Altitude Control
 We first calculate the error of position and velocity in z direction,
 
-then adjust the accelaration based on the errors,
+and adjust the accelaration based on the errors:
 
-the the thrust = m(g-a)/R(2,2)
+accelZCmd += KiPosZ * integratedAltitudeError + kpVelZ * (velZCmd - velZ);
+
+then the the thrust = m(g-a)/R(2,2)
 
 #### 5.Lateral Position Control
-We first calculate the error of position and velocity in x & y direction,
+From the error of position in x & y direction, we adjust the velocity:
 
-then adjust the accelaration based on the errors.
+velCmd += kpPosXY * (posCmd - pos);
+
+and from the error of velocity, we adjust the acceleration:
+
+accelCmd += kpVelXY * (velCmd - vel);
 
 #### 6.Yaw Control
 We calculate the error of yaw and modulo the value in (-pi, +pi),
 
-then adjust the yawRateCmd based on the error: yawRateCmd = kpYaw * err;
+then get the yawRateCmd value based on the error: yawRateCmd = kpYaw * err;
 
 ### Evaluation, run in C++
 
